@@ -1,0 +1,13 @@
+{
+	"name": "alphacodegen",
+	"authors": [
+		"Richard Andrew Cattermole"
+	],
+	"description": "Code generation with an α difference.",
+	"copyright": "Copyright © 2016, Richard Andrew Cattermole",
+	"license": "Boost/FSL-1",
+	"targetType": "executable",
+	"dependencies": {
+		"semver": "~>0.3.1"
+	}
+}
