@@ -1,4 +1,12 @@
-﻿module alphacodegen.common.target.x86.instruction;
+﻿/**
+ * Copyright:
+ *    Richard Andrew Cattermole 2016
+ * 
+ * License:
+ *    This software is dual licensed. All rights reserved.
+ *    See https://github.com/rikkimax/alphacodegen/blob/master/LICENSE.md for more information.
+ */
+module alphacodegen.common.target.x86.instruction;
 import alphacodegen.common.target.x86.register : Register;
 import alphacodegen.common.target.x86.segments : Segment;
 

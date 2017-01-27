@@ -1,4 +1,12 @@
-﻿module alphacodegen.common.target.x86.decoding;
+﻿/**
+ * Copyright:
+ *    Richard Andrew Cattermole 2016
+ * 
+ * License:
+ *    This software is dual licensed. All rights reserved.
+ *    See https://github.com/rikkimax/alphacodegen/blob/master/LICENSE.md for more information.
+ */
+module alphacodegen.common.target.x86.decoding;
 import alphacodegen.common.target.x86.instruction : InstructionVariation, InstructionGroup, InstructionEncoding;
 import alphacodegen.common.target.x86.encoding : X86Encoding;
 import alphacodegen.common.target.x86.segments : Segment, findSegment;
