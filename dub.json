@@ -6,8 +6,30 @@
 	"description": "Code generation with an α difference.",
 	"copyright": "Copyright © 2016, Richard Andrew Cattermole",
 	"license": "Boost/FSL-1",
-	"targetType": "executable",
-	"dependencies": {
-		"semver": "~>0.3.1"
-	}
+	"targetType": "none",
+	
+	"subPackages": [
+		{
+			"name": "common",
+			"sourcePaths": ["src_d/common"],
+			"importPaths": ["src_d/common"],
+			"targetType": "library",
+
+			"dependencies": {
+				"pegged": "~>0.3.3",
+				"semver": "~>0.3.1"
+			}
+		},
+		
+		{
+			"name": "test",
+			"sourcePaths": ["src_d/test"],
+			"importPaths": ["src_d/test"],
+			"targetType": "executable",
+			
+			"dependencies": {
+				"alphacodegen:common": "*"
+			}
+		}
+	]
 }
