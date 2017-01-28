@@ -6,9 +6,9 @@
  *    This software is dual licensed. All rights reserved.
  *    See https://github.com/rikkimax/alphacodegen/blob/master/LICENSE.md for more information.
  */
-module alphacodegen.commonoptimisation.defs;
-import alphacodegen.commonbytecode.defs;
-import alphacodegen.commonstorage.defs;
+module alphacodegen.common.optimisation.defs;
+import alphacodegen.common.bytecode.defs;
+import alphacodegen.common.storage.defs;
 import semver;
 
 interface IOptimisation {

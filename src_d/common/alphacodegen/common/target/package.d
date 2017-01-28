@@ -6,5 +6,5 @@
  *    This software is dual licensed. All rights reserved.
  *    See https://github.com/rikkimax/alphacodegen/blob/master/LICENSE.md for more information.
  */
-module alphacodegen.commontarget;
-public import alphacodegen.commontarget.defs;
+module alphacodegen.common.target;
+public import alphacodegen.common.target.defs;

@@ -6,5 +6,5 @@
  *    This software is dual licensed. All rights reserved.
  *    See https://github.com/rikkimax/alphacodegen/blob/master/LICENSE.md for more information.
  */
-module alphacodegen.commonoptimisation;
-public import alphacodegen.commonoptimisation.defs;
+module alphacodegen.common.optimisation;
+public import alphacodegen.common.optimisation.defs;

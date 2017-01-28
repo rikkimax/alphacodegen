@@ -59,6 +59,7 @@ struct RegisterGroup {
 struct Register {
 	string name;
 	ubyte size;
+	// if isHigh8 then not available in 64bit mode
 	bool isHigh8, requiresREX, bit64Only;
 
 	EncodeAs encodeAs;

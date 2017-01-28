@@ -6,8 +6,8 @@
  *    This software is dual licensed. All rights reserved.
  *    See https://github.com/rikkimax/alphacodegen/blob/master/LICENSE.md for more information.
  */
-module alphacodegen.commonoutput.defs;
-import alphacodegen.commonstorage.defs;
+module alphacodegen.common.output.defs;
+import alphacodegen.common.storage.defs;
 
 interface ITargetOutput {
 	@property {

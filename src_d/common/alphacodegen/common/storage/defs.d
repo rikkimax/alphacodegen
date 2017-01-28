@@ -6,9 +6,9 @@
  *    This software is dual licensed. All rights reserved.
  *    See https://github.com/rikkimax/alphacodegen/blob/master/LICENSE.md for more information.
  */
-module alphacodegen.commonstorage.defs;
-import alphacodegen.commonbytecode.defs;
-import alphacodegen.commontarget.defs;
+module alphacodegen.common.storage.defs;
+import alphacodegen.common.bytecode.defs;
+import alphacodegen.common.target.defs;
 
 interface IStorage {
 	void setDefaultTarget(ITarget target);
@@ -59,10 +59,11 @@ interface IStorage {
 		Instruction startInstructionFor(Symbol symbol);
 		Instruction endInstructionFor(Symbol symbol);
 		ubyte[] dataFor(Symbol symbol);
+		SymbolPatch[] patchesFor(Symbol);
 
 		void startInstructionFor(Symbol symbol, Instruction instruction);
 		void endInstructionFor(Symbol symbol, Instruction instruction);
-		void dataFor(Symbol symbol, ubyte[] data);
+		void dataFor(Symbol symbol, ubyte[] data, SymbolPatch[] patches);
 
 		/// Allocates an instruction for a symbol
 		Instruction allocateInstructionFor(Symbol symbol);
@@ -110,14 +111,17 @@ struct SymbolV {
 		Extern
 	}
 
+	void data(ubyte[] data, SymbolPatch[] patches...) { storage.dataFor(&this, data, patches); }
+
 	@property {
 		Instruction startInstruction() { return storage.startInstructionFor(&this); }
 		Instruction endInstruction() { return storage.endInstructionFor(&this); }
 		const(ubyte[]) data() { return cast(const(ubyte[]))storage.dataFor(&this); }
+		const(SymbolPatch[]) dataPatches() { return cast(const(SymbolPatch[]))storage.patchesFor(&this); }
 
 		void startInstruction(Instruction start) { storage.startInstructionFor(&this, start); }
 		void endInstruction(Instruction end) { storage.endInstructionFor(&this, end); }
-		void data(ubyte[] data) { storage.dataFor(&this, data); }
+		void data(ubyte[] data) { storage.dataFor(&this, data, null); }
 
 		/**
 		 * If you have other symbols which has the same instructions just different target,
@@ -144,4 +148,10 @@ align(1):
 			ubyte[] array;
 		}
 	}
+}
+
+struct SymbolPatch {
+	Label to;
+	size_t offsetPastSymbol, offsetPastLabel;
+	ubyte size;
 }

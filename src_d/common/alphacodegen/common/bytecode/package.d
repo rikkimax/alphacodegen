@@ -6,5 +6,5 @@
  *    This software is dual licensed. All rights reserved.
  *    See https://github.com/rikkimax/alphacodegen/blob/master/LICENSE.md for more information.
  */
-module alphacodegen.commonbytecode;
-public import alphacodegen.commonbytecode.defs;
+module alphacodegen.common.bytecode;
+public import alphacodegen.common.bytecode.defs;

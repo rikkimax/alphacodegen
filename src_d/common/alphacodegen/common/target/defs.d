@@ -6,11 +6,11 @@
  *    This software is dual licensed. All rights reserved.
  *    See https://github.com/rikkimax/alphacodegen/blob/master/LICENSE.md for more information.
  */
-module alphacodegen.commontarget.defs;
-import alphacodegen.commonbytecode.defs;
-import alphacodegen.commonstorage.defs;
-import alphacodegen.commonoptimisation.defs;
-import alphacodegen.commonoutput.defs;
+module alphacodegen.common.target.defs;
+import alphacodegen.common.bytecode.defs;
+import alphacodegen.common.storage.defs;
+import alphacodegen.common.optimisation.defs;
+import alphacodegen.common.output.defs;
 
 interface ITarget {
 	@property {
