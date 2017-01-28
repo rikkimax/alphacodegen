@@ -28,6 +28,35 @@
 			"targetType": "executable",
 			
 			"dependencies": {
+				"alphacodegen:generated": "*"
+			}
+		},
+
+		{
+			"name": "pregen1",
+			"sourcePaths": ["src_d/pregen1"],
+			"targetType": "executable",
+
+			"dependencies": {
+				"alphacodegen:common": "*"
+			}
+		},
+		{
+			"name": "pregen2",
+			"sourcePaths": ["src_d/pregen2"],
+			"targetType": "executable",
+			
+			"dependencies": {
+				"alphacodegen:common": "*"
+			}
+		},
+
+		{
+			"name": "generated",
+			"sourcePaths": ["src_d/generated"],
+			"targetType": "library",
+			
+			"dependencies": {
 				"alphacodegen:common": "*"
 			}
 		}
