@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ItemType>GenericProject</ItemType>
+    <ProjectGuid>{352E5772-2DF2-48ED-80C2-B8848A30C134}</ProjectGuid>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="targets\x86\registers.md" />
+    <None Include="targets\x86\instructions\aaa.md" />
+    <None Include="targets\x86\instructions\aad.md" />
+    <None Include="targets\x86\instructions\aam.md" />
+    <None Include="targets\x86\instructions\aas.md" />
+    <None Include="targets\x86\instructions\adc.md" />
+    <None Include="language\c\macro_preprocessor.md" />
+    <None Include="targets\x86\encodingSizes.md" />
+    <None Include="targets\x86\modrm_sib_encoding.md" />
+    <None Include="targets\x86\notation.md" />
+    <None Include="targets\x86\encodingConsiderations.md" />
+    <None Include="targets\x86\instructions\introduction.md" />
+    <None Include="targets\x86\instructions\add.md" />
+    <None Include="targets\x86\instructions\and.md" />
+    <None Include="targets\x86\instructions\andn.md" />
+  </ItemGroup>
+</Project>

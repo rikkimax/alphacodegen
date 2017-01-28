@@ -1,0 +1,14 @@
+targets/x86/registers.md
+targets/x86/modrm_sib_encoding.md
+targets/x86/encodingSizes.md
+targets/x86/encodingConsiderations.md
+targets/x86/notation.md
+
+targets/x86/instructions/introduction.md
+targets/x86/instructions/aaa.md
+targets/x86/instructions/aad.md
+targets/x86/instructions/aam.md
+targets/x86/instructions/aas.md
+targets/x86/instructions/adc.md
+targets/x86/instructions/and.md
+targets/x86/instructions/andn.md

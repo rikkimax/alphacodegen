@@ -1,3 +1,6 @@
+## Manuscript
+The manuscript has parts originating from the AMD64 manuals but most is original. It should be considered to be owned in part by AMD. It should not be used for commerical purposes only informative .
+
 ## Commercial usage
 
 Fair Source License, version 0.9
