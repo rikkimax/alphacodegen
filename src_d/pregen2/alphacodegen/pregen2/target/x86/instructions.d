@@ -533,7 +533,7 @@ private {
 				while(children.length > 0) {
 					if (children.length > 1) {
 						if (children[1].name == "Markdown.ListContinuationBlock") {
-							handleEntry(children[0].matches[0], children[1]);
+							handleEntry(children[0].input[children[0].begin .. children[0].end], children[1]);
 
 							if (children.length > 2) {
 								children = children[2 .. $];
@@ -543,7 +543,7 @@ private {
 						}
 					}
 
-					handleEntry(children[0].matches[0], ParseTree.init);
+					handleEntry(children[0].input[children[0].begin .. children[0].end], ParseTree.init);
 
 					if (children.length > 1) {
 						children = children[1 .. $];
