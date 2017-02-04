@@ -18,7 +18,7 @@ RegisterGroup[] genRegisterDCode(string outputFile, string moduleName) {
     
     write(outputFile, "// Auto generated, do not edit.
 module " ~ moduleName ~ ";
-import alphacodegen.common.targets.x86.register;
+import alphacodegen.common.target.x86.register;
 
 bool findRegister(string name, out Register oreg) {
     foreach(reg; x86Registers) {

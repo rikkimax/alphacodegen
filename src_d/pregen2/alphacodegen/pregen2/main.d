@@ -20,12 +20,12 @@ void main() {
 
     writeln("### Generating D registers from markdown files");
     
-    RegisterGroup[] registers = genRegisterDCode("src_d/generated/alphacodegen/targets/x86/registers.d", "alphacodegen.targets.x86.registers");
+    RegisterGroup[] registers = genRegisterDCode("src_d/generated/alphacodegen/targets/x86/registers.d", "alphacodegen.target.x86.registers");
     
     writeln("Done!");
     writeln("### Generating markdown for instruction maps");
 
-	InstructionGroup[] instructionGroups = genInstructionsDCode("src_d/generated/alphacodegen/targets/x86/instructions.d", "alphacodegen.targets.x86.instructions", cast(const)registers);
+	InstructionGroup[] instructionGroups = genInstructionsDCode("src_d/generated/alphacodegen/targets/x86/instructions.d", "alphacodegen.target.x86.instructions", cast(const)registers);
 
     writeln("Done!");
 

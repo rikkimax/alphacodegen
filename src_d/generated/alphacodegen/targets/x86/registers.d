@@ -1,6 +1,6 @@
 // Auto generated, do not edit.
-module alphacodegen.targets.x86.registers;
-import alphacodegen.common.targets.x86.register;
+module alphacodegen.target.x86.registers;
+import alphacodegen.common.target.x86.register;
 
 bool findRegister(string name, out Register oreg) {
     foreach(reg; x86Registers) {

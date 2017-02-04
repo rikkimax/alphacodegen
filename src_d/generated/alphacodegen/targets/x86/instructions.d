@@ -1,23 +1,40 @@
 // Auto generated, do not edit.
-module alphacodegen.targets.x86.instructions;
-import alphacodegen.common.targets.x86.instruction;
+module alphacodegen.target.x86.instructions;
+import alphacodegen.common.target.x86.instruction;
 
 private alias EncodingType = InstructionEncoding.Type;
-private import alphacodegen.common.targets.x86.encoding : X86Encoding;
+private import alphacodegen.common.target.x86.encoding : X86Encoding;
 
 
-/+bool findRegister(string name, out Register oreg) {
-    foreach(reg; x86Registers) {
-        Register match = reg.match(name);
+bool findInstruction(string name, string argspec, out immutable(InstructionGroup)* group, out immutable(InstructionVariation)* variation) {
+	import std.algorithm : splitter;
 
-        if (match.name !is null) {
-            oreg = match;
-            return true;
-        }
-    }
+	foreach(ref grp; x86Instructions) {
+	F2: foreach(ref var; grp.variations) {
+			if (var.mnemonic.name != name)
+				continue F2;
 
-    return false;
-}+/
+			auto specA = var.mnemonic.operands;
+			foreach(arg; argspec.splitter(' ')) {
+				if (specA.length == 0)
+					continue F2;
+				if (arg[$-1] == ',')
+					arg = arg[0 .. $-1];
+				if (specA[0] != arg) {
+					// TODO: fuzzy search
+					// e.g. registers eAX == EAX
+					continue F2;
+				}
+			}
+
+			group = &grp;
+			variation = &var;
+			return true;
+		}
+	}
+
+	return false;
+}
 
 static immutable(InstructionGroup[]) x86Instructions = [
 	InstructionGroup("ASCII Adjust After Addition", [
