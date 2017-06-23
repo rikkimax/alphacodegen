@@ -75,6 +75,8 @@
 - ymm/mem128
 - ymm1/mem256
 - ymm2/mem256
+- mem16&mem16 = mem16
+- mem32&mem32 = mem32
 
 #### Opcode
 
